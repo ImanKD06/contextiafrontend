@@ -1,0 +1,7 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-white text-neutral-950 antialiased;font-family:Archivo,sans-serif}
+html.dark{filter:invert(1) hue-rotate(180deg);background:#fff}
+.dots{background-image:radial-gradient(#d4d4d4 1px,transparent 1px);background-size:24px 24px}
+.display{font-stretch:125%;letter-spacing:-.03em;line-height:1}
+:focus-visible{outline:2px solid #4f46e5;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
