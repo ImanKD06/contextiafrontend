@@ -58,4 +58,4 @@ export async function generateProposal(req: ProposalRequest, names: string[]): P
   return p
 }
 
-export const reportUrl = (relative: string) => relative ? `${API_URL}${relative}` : ''
+export const reportUrl = (url: string) => url || ''
