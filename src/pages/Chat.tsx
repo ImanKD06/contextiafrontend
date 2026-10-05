@@ -83,34 +83,14 @@ export default function Chat() {
 
         <Card className="flex h-[70vh] flex-col">
           <div className="flex-1 space-y-5 overflow-y-auto p-5">
-            {msgs.map((m, i) => (
+                       {msgs.map((m, i) => (
               <div key={i} className={m.role === 'user' ? 'flex justify-end' : ''}>
                 <div className={`max-w-[85%] whitespace-pre-line rounded-2xl px-4 py-3 text-sm leading-relaxed ${m.role === 'user' ? 'bg-neutral-950 text-white' : 'border border-neutral-200'}`}>
                   {m.text}
-                  {m.sources && (
-                    <details className="mt-3 text-xs">
-                      <summary className="cursor-pointer font-medium">Ver fuentes ({m.sources.length})</summary>
-                      {m.sources.length ? (
-                        <div className="mt-2 space-y-2 text-neutral-950">
-                          {m.sources.map((s, j) => (
-  <details key={j} className="rounded-lg border border-neutral-200 bg-white p-3">
-    <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
-      <span className="font-medium">{s.document_title}</span>
-      <span className="text-xs text-neutral-500">
-        Similitud {(s.similarity * 100).toFixed(0)}%
-      </span>
-    </summary>
-  </details>
-))}
-                        </div>
-                      ) : (
-                        <p className="mt-2 text-neutral-500">No se han encontrado fuentes relevantes.</p>
-                      )}
-                    </details>
-                  )}
                 </div>
               </div>
             ))}
+            
             {busy >= 0 && <p className="animate-pulse text-sm text-neutral-500">{STAGES[busy]}</p>}
             <div ref={end} />
           </div>
