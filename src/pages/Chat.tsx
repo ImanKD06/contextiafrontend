@@ -93,14 +93,7 @@ export default function Chat() {
                       {m.sources.length ? (
                         <div className="mt-2 space-y-2 text-neutral-950">
                           {m.sources.map((s, j) => (
-                            <details key={j} className="rounded-lg border border-neutral-200 bg-white p-3">
-                              <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
-                                <span className="font-medium">{s.document_title}</span>
-                                <span className="text-xs text-neutral-500">
-                                  Chunk {s.chunk_id} · similitud {(s.similarity * 100).toFixed(0)}%
-                                </span>
-                              </summary>
-                            </details>
+                           
                           ))}
                         </div>
                       ) : (
