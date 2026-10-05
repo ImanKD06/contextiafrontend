@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { BarChart3, FileBarChart, FileText, LayoutDashboard, Menu, MessagesSquare, Sparkles, X } from 'lucide-react'
 import { USE_MOCK } from '../../api/client'
-const main = [['/', 'Dashboard', LayoutDashboard], ['/documentos', 'Documentos', FileText], ['/chat', 'Chat con documentos', MessagesSquare], ['/analisis', 'Análisis', BarChart3], ['/propuestas', 'Propuestas', Sparkles], ['/informes', 'Informes', FileBarChart]] as const
+const main = [['/', 'Panel', LayoutDashboard], ['/documentos', 'Documentos', FileText], ['/chat', 'Chat con documentos', MessagesSquare], ['/analisis', 'Análisis', BarChart3], ['/propuestas', 'Propuestas', Sparkles], ['/informes', 'Informes', FileBarChart]] as const
 const link = ({ isActive }: { isActive: boolean }) => `flex items-center gap-3 rounded-full px-4 py-2 text-sm transition ${isActive ? 'border border-neutral-950 font-medium' : 'border border-transparent text-neutral-600 hover:text-neutral-950'}`
 export default function Layout() {
   const [open, setOpen] = useState(false)
