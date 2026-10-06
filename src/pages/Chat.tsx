@@ -49,9 +49,9 @@ export default function Chat() {
     setBusy(-1)
   }
 
-  // FIX 3: Validar que docs sea un Array plano
-  const ready = Array.isArray(docs) ? docs : []
-
+const all = Array.isArray(docs) ? docs : []
+  const ready = Array.from(new Map(all.map(d => [d.filename, d])).values())
+  
   return (
     <>
       <PageHeader light="Chat" title="con documentos" />
