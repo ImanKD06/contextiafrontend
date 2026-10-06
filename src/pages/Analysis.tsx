@@ -65,9 +65,9 @@ export default function Analysis() {
     }
   }
 
-  // 💡 3. Garantizar que ready sea siempre un Array plano
-  const ready = Array.isArray(docs) ? docs : (docs as any)?.documents || []
-
+const all = Array.isArray(docs) ? docs : (docs as any)?.documents || []
+const ready = Array.from(new Map(all.map(d => [d.filename, d])).values())
+  
   return (
     <>
       <PageHeader
