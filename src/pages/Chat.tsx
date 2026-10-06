@@ -78,7 +78,6 @@ const all = Array.isArray(docs) ? docs : []
               ))}
             </div>
           )}
-          <p className="mt-3 text-xs text-neutral-500">La API responde sobre un único documento a la vez.</p>
         </Card>
 
         <Card className="flex h-[70vh] flex-col">
